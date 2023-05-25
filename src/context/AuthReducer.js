@@ -2,6 +2,7 @@ const AuthReducer = (state, action) => {
   switch (action.type) {
     case "LOGIN": {
       return {
+        //assign the login user to our curent user
         currentUser: action.payload,
       };
     }

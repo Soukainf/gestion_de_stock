@@ -24,15 +24,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/">
+            <Route index element={<RequireAuth><Home /> </RequireAuth>}/>
             <Route path="login" element={<Login />} />
-            <Route
-              index
-              element={
-                <RequireAuth>
-                  <Home />
-                </RequireAuth>
-              }
-            />
             <Route path="users">
               <Route
                 index
